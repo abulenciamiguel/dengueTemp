@@ -22,7 +22,7 @@ process dengue {
 
 	script:
 	"""
-	dengue-ngs.py \
+	python3 /opt/conda/bin/dengue-ngs.py \
     --jobs 1 \
     --threads 4 \
     --folder ${inputDirectory}
