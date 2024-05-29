@@ -1,6 +1,6 @@
 process dengue {
 	cpus 8
-	container 'ufuomababatunde/denguer:v1.4.0'
+	container 'ufuomababatunde/denguer:v1.5.0'
 
 	tag "Werk werk werk werk werk"
 
