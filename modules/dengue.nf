@@ -1,6 +1,6 @@
 process dengue {
 	cpus 8
-	container 'quay.io/biocontainers/fastp:0.20.1--h8b12597_0'
+	container 'ufuomababatunde/dengue-slim:v1.0.0'
 
 	tag "Werk werk werk werk werk"
 
