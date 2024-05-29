@@ -18,15 +18,15 @@ process dengue {
     path(krakenDB)
 
 	output:
-	path("*")
+	path("/output_data/*")
 
 
 	script:
 	"""
 	dengue-ngs.py \
-    -f ${inputDirectory} \
-    -k ${krakenDB} \
-    --platform illumina
+    --jobs 1 \
+    --threads 4 \
+    --folder ${inputDirectory}
 	"""
 
 }
