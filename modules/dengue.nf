@@ -15,6 +15,7 @@ process dengue {
 	
 	input:
 	path(inputDirectory)
+    path(krakenDB)
 
 	output:
 	path("*")
@@ -23,10 +24,11 @@ process dengue {
 	script:
 	"""
     dengue-download-ref.py
-    
+
 	dengue-ngs.py \
     --jobs 1 \
     --threads 4 \
+    -k ${krakenDB} \
     --platform illumina \
     --folder ${inputDirectory}
 	"""
