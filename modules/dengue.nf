@@ -17,7 +17,7 @@ process dengue {
 	path(inputDirectory)
 
 	output:
-	path("/output_data/*")
+	path("/*")
 
 
 	script:
