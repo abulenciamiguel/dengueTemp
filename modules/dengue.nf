@@ -23,6 +23,8 @@ process dengue {
 
 	script:
 	"""
+    dengue-download-ref.py
+    
 	dengue-ngs.py \
     -j 1 \
     -t 4 \
