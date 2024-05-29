@@ -6,7 +6,7 @@ process dengue {
 
 	
 	publishDir (
-	path: "${params.out_dir}/01_result/",
+	path: "${params.outputDir}/01_result/",
 	mode: 'copy',
 	overwrite: 'true'
 	)
