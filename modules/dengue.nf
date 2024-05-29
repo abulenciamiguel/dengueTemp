@@ -15,7 +15,6 @@ process dengue {
 	
 	input:
 	path(inputDirectory)
-    path(krakenDB)
 
 	output:
 	path("/output_data/*")
