@@ -22,6 +22,8 @@ process dengue {
 
 	script:
 	"""
+    dengue-download-ref.py
+    
 	dengue-ngs.py \
     --jobs 1 \
     --threads 4 \
