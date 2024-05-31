@@ -16,7 +16,7 @@ workflow {
 
 	main:
 		ch_inDir.view()
-		dengue(ch_inDir)
+		dengue(ch_inDir, params.krakenDB)
 
 }
 
