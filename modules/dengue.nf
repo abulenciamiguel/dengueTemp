@@ -1,6 +1,6 @@
 process dengue {
 	cpus 8
-	container 'ufuomababatunde/denguer:v1.5.0'
+	container 'ufuomababatunde/denguer:v1.1.0'
 
 	tag "Werk werk werk werk werk"
 
@@ -15,7 +15,6 @@ process dengue {
 	
 	input:
 	path(inputDirectory)
-    path(krakenDB)
 
 	output:
 	path("*")
@@ -23,12 +22,11 @@ process dengue {
 
 	script:
 	"""
-    dengue-download-ref.py
-
 	dengue-ngs.py \
     -j 1 \
-    -t 4 \
-    -k ${krakenDB} \
+    --read1_suffix _S6_L001_R1_001.fastq.gz \
+    --read2_suffix _S6_L001_R2_001.fastq.gz \
+    -t 16 \
     --platform illumina \
     -f ${inputDirectory}
 	"""
