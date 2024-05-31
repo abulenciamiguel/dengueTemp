@@ -1,6 +1,6 @@
 process dengue {
 	cpus 8
-	container 'ufuomababatunde/denguertest:v1'
+	container 'ufuomababatunde/denguer:v0.0.1'
 
 	tag "Werk werk werk werk werk"
 
@@ -25,8 +25,8 @@ process dengue {
 	dengue-ngs.py \
     -j 1 \
     -t 16 \
-    --read1_suffix _S6_L001_R1_001.fastq.gz \
-    --read2_suffix _S6_L001_R2_001.fastq.gz \
+    --read1_suffix _S[0-9]+_L001_R1_001.fastq.gz \
+    --read2_suffix _S[0-9]+_L001_R2_001.fastq.gz \
     --platform illumina \
     -f ${inputDirectory}
 	"""
